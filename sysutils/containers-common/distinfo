@@ -1,0 +1,9 @@
+TIMESTAMP = 1692269249
+SHA256 (containers-common-v0.55.3_GH0.tar.gz) = c2e4e940174c95ac61f50fc609330736b26b1bdc38dd9f26d58f7b553cbdb906
+SIZE (containers-common-v0.55.3_GH0.tar.gz) = 9958525
+SHA256 (containers-image-v5.27.0_GH0.tar.gz) = 6e47ea5b81a8ffe234d00deca8ad6653ebd044cd9827350e22f3a352146fb684
+SIZE (containers-image-v5.27.0_GH0.tar.gz) = 699340
+SHA256 (containers-storage-v1.48.0_GH0.tar.gz) = 5a59739d545d2cb054c5079a9fa1beb3a4611c0aef617c65792f1e3d9739fe19
+SIZE (containers-storage-v1.48.0_GH0.tar.gz) = 4090366
+SHA256 (containers-skopeo-v1.13.2_GH0.tar.gz) = 1b5e7b4fcbc3b0ba5637793605a5bdc6372ec11e60306aef0ed29ec1fd64893f
+SIZE (containers-skopeo-v1.13.2_GH0.tar.gz) = 7924019

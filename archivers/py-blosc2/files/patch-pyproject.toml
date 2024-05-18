@@ -1,0 +1,13 @@
+--- pyproject.toml.orig	2023-09-27 12:22:11 UTC
++++ pyproject.toml
+@@ -3,9 +3,7 @@ requires = [
+     "setuptools",
+     "scikit-build",
+     "cython",
+-    "cmake",
+-    "ninja",
+-    "oldest-supported-numpy"]
++]
+ 
+ [project]
+ name = "blosc2"

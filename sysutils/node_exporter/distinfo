@@ -1,0 +1,5 @@
+TIMESTAMP = 1696869041
+SHA256 (go/sysutils_node_exporter/node_exporter-v1.6.1/v1.6.1.mod) = a0809a9aa7204b6ce15d2b4b6e8cf267ec21987687bd5751c52d43441b703fa2
+SIZE (go/sysutils_node_exporter/node_exporter-v1.6.1/v1.6.1.mod) = 2537
+SHA256 (go/sysutils_node_exporter/node_exporter-v1.6.1/v1.6.1.zip) = 0c8d801c75d210e0352f9fbf5ba163603d03621c14103724240851ec194e8d9c
+SIZE (go/sysutils_node_exporter/node_exporter-v1.6.1/v1.6.1.zip) = 521898

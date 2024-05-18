@@ -1,0 +1,31 @@
+PORTNAME=	libharu
+DISTVERSIONPREFIX=	v
+DISTVERSION=	2.4.4
+CATEGORIES=	print
+DIST_SUBDIR=	${PORTNAME}
+
+MAINTAINER=	fluffy@FreeBSD.org
+COMMENT=	Haru Free PDF Library
+WWW=		http://libharu.org/
+
+LICENSE=	ZLIB
+
+LIB_DEPENDS=	libpng.so:graphics/png
+
+USES=		cmake
+USE_LDCONFIG=	yes
+
+USE_GITHUB=	yes
+
+OPTIONS_DEFINE=	EXAMPLES
+
+PLIST_SUB+=	SHL3=${PORTVERSION} SHL2=${PORTVERSION:R} SHL1=${PORTVERSION:R:R}
+PORTEXAMPLES=	*
+
+EXAMPLES_CMAKE_ON=	-DLIBHPDF_EXAMPLES:BOOL=ON  \
+			-DEXAMPLESDIR:STRING=share/examples/${PORTNAME}
+
+post-install:
+	${LN} -s libhpdf.so.${PORTVERSION} ${STAGEDIR}${PREFIX}/lib/libhpdf.so.${PORTVERSION:R:R}
+
+.include <bsd.port.mk>

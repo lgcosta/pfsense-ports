@@ -1,0 +1,5 @@
+pkg/nmap.xml
+/etc/inc/priv/nmap.priv.inc
+www/nmap_scan.php
+%%DATADIR%%/info.xml
+@dir /etc/inc/priv

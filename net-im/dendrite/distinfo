@@ -1,0 +1,5 @@
+TIMESTAMP = 1695897918
+SHA256 (go/net-im_dendrite/dendrite-v0.13.3/v0.13.3.mod) = 5c583e0e9fe5e3df1678fdd26a2e45ce9f139c0739403dc664f3e9e4389404aa
+SIZE (go/net-im_dendrite/dendrite-v0.13.3/v0.13.3.mod) = 6592
+SHA256 (go/net-im_dendrite/dendrite-v0.13.3/v0.13.3.zip) = 2855595b8db4ae3b37ac92f944f8500cfd6f4dd396f2aba8d931cb433dd2df33
+SIZE (go/net-im_dendrite/dendrite-v0.13.3/v0.13.3.zip) = 1895140

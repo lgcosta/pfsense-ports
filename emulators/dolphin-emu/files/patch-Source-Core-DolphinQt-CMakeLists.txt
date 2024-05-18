@@ -1,0 +1,23 @@
+Add DISABLE_NLS option
+
+--- Source/Core/DolphinQt/CMakeLists.txt.orig	2023-07-23 02:24:09 UTC
++++ Source/Core/DolphinQt/CMakeLists.txt
+@@ -479,6 +479,9 @@ if(WIN32)
+   )
+ endif()
+ 
++option(DISABLE_NLS "Disable native language support (NLS)" OFF)
++if(NOT DISABLE_NLS)
++
+ # Handle localization
+ find_package(Gettext)
+ 
+@@ -530,6 +533,8 @@ if(GETTEXT_MSGFMT_EXECUTABLE)
+     endif()
+   endforeach()
+ endif()
++
++endif() # NOT DISABLE_NLS
+ 
+ if(APPLE)
+   include(BundleUtilities)

@@ -1,0 +1,181 @@
+PORTNAME=	diesel
+DISTVERSIONPREFIX=	v
+DISTVERSION=	2.1.3
+CATEGORIES=	databases
+PKGNAMESUFFIX=	-cli
+
+MAINTAINER=	yuri@FreeBSD.org
+COMMENT=	Extensible ORM and Query Builder for Rust
+WWW=		https://diesel.rs
+
+LICENSE=	APACHE20 MIT
+LICENSE_COMB=	dual
+LICENSE_FILE_APACHE20=	${WRKSRC}/LICENSE-APACHE
+LICENSE_FILE_MIT=	${WRKSRC}/LICENSE-MIT
+
+USES=		cargo mysql pgsql sqlite
+
+USE_GITHUB=	yes
+GH_ACCOUNT=	diesel-rs
+
+CARGO_BUILD_ARGS=	--package=diesel_cli
+CARGO_INSTALL_PATH=	diesel_cli
+CARGO_CRATES=	aho-corasick-1.1.1 \
+		android-tzdata-0.1.1 \
+		android_system_properties-0.1.5 \
+		anstream-0.6.4 \
+		anstyle-1.0.4 \
+		anstyle-parse-0.2.2 \
+		anstyle-query-1.0.0 \
+		anstyle-wincon-3.0.1 \
+		argon2-0.5.2 \
+		assert_matches-1.5.0 \
+		autocfg-1.1.0 \
+		base64ct-1.6.0 \
+		bigdecimal-0.4.1 \
+		bitflags-1.3.2 \
+		bitflags-2.4.0 \
+		blake2-0.10.6 \
+		block-buffer-0.10.4 \
+		bumpalo-3.14.0 \
+		byteorder-1.5.0 \
+		cc-1.0.83 \
+		cfg-if-1.0.0 \
+		chrono-0.4.31 \
+		clap-4.4.6 \
+		clap_builder-4.4.6 \
+		clap_complete-4.4.3 \
+		clap_derive-4.4.2 \
+		clap_lex-0.5.1 \
+		colorchoice-1.0.0 \
+		console-0.15.7 \
+		core-foundation-sys-0.8.4 \
+		cpufeatures-0.2.9 \
+		crypto-common-0.1.6 \
+		deranged-0.3.8 \
+		diffy-0.3.0 \
+		digest-0.10.7 \
+		dotenvy-0.15.7 \
+		encode_unicode-0.3.6 \
+		env_logger-0.8.4 \
+		equivalent-1.0.1 \
+		errno-0.3.4 \
+		errno-dragonfly-0.1.2 \
+		fastrand-2.0.1 \
+		form_urlencoded-1.2.0 \
+		generic-array-0.14.7 \
+		getrandom-0.2.10 \
+		hashbrown-0.14.1 \
+		heck-0.4.1 \
+		iana-time-zone-0.1.57 \
+		iana-time-zone-haiku-0.1.2 \
+		idna-0.4.0 \
+		indexmap-2.0.2 \
+		insta-1.33.0 \
+		ipnet-2.8.0 \
+		ipnetwork-0.20.0 \
+		itoa-1.0.9 \
+		js-sys-0.3.64 \
+		lazy_static-1.4.0 \
+		libc-0.2.148 \
+		libm-0.2.7 \
+		libsqlite3-sys-0.26.0 \
+		linked-hash-map-0.5.6 \
+		linux-raw-sys-0.4.8 \
+		lock_api-0.4.10 \
+		log-0.4.20 \
+		memchr-2.6.4 \
+		mysqlclient-sys-0.2.5 \
+		nu-ansi-term-0.46.0 \
+		num-bigint-0.4.4 \
+		num-integer-0.1.45 \
+		num-traits-0.2.16 \
+		once_cell-1.18.0 \
+		overload-0.1.1 \
+		parking_lot-0.12.1 \
+		parking_lot_core-0.9.8 \
+		password-hash-0.5.0 \
+		percent-encoding-2.3.0 \
+		pkg-config-0.3.27 \
+		ppv-lite86-0.2.17 \
+		pq-sys-0.4.8 \
+		proc-macro2-1.0.68 \
+		quickcheck-1.0.3 \
+		quote-1.0.33 \
+		r2d2-0.8.10 \
+		rand-0.8.5 \
+		rand_chacha-0.3.1 \
+		rand_core-0.6.4 \
+		redox_syscall-0.3.5 \
+		regex-1.9.6 \
+		regex-automata-0.3.9 \
+		regex-syntax-0.7.5 \
+		rustix-0.38.17 \
+		ryu-1.0.15 \
+		scheduled-thread-pool-0.2.7 \
+		scopeguard-1.2.0 \
+		serde-1.0.188 \
+		serde_derive-1.0.188 \
+		serde_json-1.0.107 \
+		serde_regex-1.1.0 \
+		serde_spanned-0.6.3 \
+		similar-2.2.1 \
+		smallvec-1.11.1 \
+		strsim-0.10.0 \
+		subtle-2.5.0 \
+		syn-2.0.38 \
+		tempfile-3.8.0 \
+		time-0.3.29 \
+		time-core-0.1.2 \
+		time-macros-0.2.15 \
+		tinyvec-1.6.0 \
+		tinyvec_macros-0.1.1 \
+		toml-0.7.8 \
+		toml_datetime-0.6.3 \
+		toml_edit-0.19.15 \
+		typenum-1.17.0 \
+		unicode-bidi-0.3.13 \
+		unicode-ident-1.0.12 \
+		unicode-normalization-0.1.22 \
+		url-2.4.1 \
+		utf8parse-0.2.1 \
+		uuid-1.4.1 \
+		vcpkg-0.2.15 \
+		version_check-0.9.4 \
+		wasi-0.11.0+wasi-snapshot-preview1 \
+		wasm-bindgen-0.2.87 \
+		wasm-bindgen-backend-0.2.87 \
+		wasm-bindgen-macro-0.2.87 \
+		wasm-bindgen-macro-support-0.2.87 \
+		wasm-bindgen-shared-0.2.87 \
+		winapi-0.3.9 \
+		winapi-i686-pc-windows-gnu-0.4.0 \
+		winapi-x86_64-pc-windows-gnu-0.4.0 \
+		windows-0.48.0 \
+		windows-sys-0.45.0 \
+		windows-sys-0.48.0 \
+		windows-targets-0.42.2 \
+		windows-targets-0.48.5 \
+		windows_aarch64_gnullvm-0.42.2 \
+		windows_aarch64_gnullvm-0.48.5 \
+		windows_aarch64_msvc-0.42.2 \
+		windows_aarch64_msvc-0.48.5 \
+		windows_i686_gnu-0.42.2 \
+		windows_i686_gnu-0.48.5 \
+		windows_i686_msvc-0.42.2 \
+		windows_i686_msvc-0.48.5 \
+		windows_x86_64_gnu-0.42.2 \
+		windows_x86_64_gnu-0.48.5 \
+		windows_x86_64_gnullvm-0.42.2 \
+		windows_x86_64_gnullvm-0.48.5 \
+		windows_x86_64_msvc-0.42.2 \
+		windows_x86_64_msvc-0.48.5 \
+		winnow-0.5.16 \
+		yaml-rust-0.4.5
+
+PLIST_FILES=	bin/${PORTNAME}
+
+post-install:
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/${PORTNAME}
+
+.include <bsd.port.mk>
